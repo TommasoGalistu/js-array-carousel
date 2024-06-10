@@ -17,8 +17,28 @@
     height: 400px;
     width: 600px;
     overflow: hidden;
+    position: relative;
     /* debug */
     background-color: red;
+}
+.freccia{
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+}
+
+.freccia i{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 1rem 1.5rem;
+    border-radius: 50%;
+}
+.freccia i:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.78);
 }
 .contFoto img{
     height: 100%;
