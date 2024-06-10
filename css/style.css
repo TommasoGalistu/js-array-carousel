@@ -36,5 +36,6 @@
 }
 .contFotoPiccole img{
     width: 100%;
-    height: calc();
+    height: calc(100% / var(--numFoto));
+    
 }
