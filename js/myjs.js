@@ -79,3 +79,25 @@ bottAvanti.addEventListener('click', () => {
         items2[contatore].classList.add('active')
     }
 })
+
+// creazione evento per andare indietro
+bottIndietro.addEventListener('click', () => {
+    
+    if(contatore === 0){
+        items[contatore].classList.remove('active')
+        items2[contatore].classList.remove('active') 
+        contatore = arrFoto.length - 1
+        items[contatore].classList.add('active')
+        items2[contatore].classList.add('active')
+    }else{
+        items[contatore].classList.remove('active')
+        items2[contatore].classList.remove('active') 
+        contatore--
+        items[contatore].classList.add('active')
+        items2[contatore].classList.add('active')
+    }
+        
+        
+        
+   
+})
