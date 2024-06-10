@@ -19,8 +19,6 @@
     position: relative;
     border: 1px solid white;
     border-right: 0;
-    /* debug */
-    background-color: red;
 }
 .freccia{
     text-align: center;
@@ -42,10 +40,15 @@
     background-color: rgba(255, 255, 255, 0.78);
 }
 .contFoto img{
+    display: none;
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center center;
+}
+.contFoto img.active{
+    display: block;
+    
 }
 
 .contFotoPiccole{
@@ -60,9 +63,13 @@
 
 
 .contFotoPiccole img{
+    
     width: 100%;
     height: calc(100% / var(--numFoto));
     filter: grayscale(80%);
+}
+.contFotoPiccole img.active{
+    display: block;
 }
 
 .contFotoPiccole img.active{
