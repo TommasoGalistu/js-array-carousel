@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* debug */
+    background-color: green;
+}
+
+.contFoto{
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+    /* debug */
+    background-color: red;
+}
+.contFoto img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.contFotoPiccole{
+    height: 400px;
+    width: 300px;
+    overflow: hidden;
+    /* debug */
+    background-color: red;
+}
+.contFotoPiccole img{
+    width: 100%;
+    height: calc();
+}
