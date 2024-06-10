@@ -54,14 +54,28 @@ let modificaNumFoto = document.documentElement.style.setProperty('--numFoto', nu
 // modifica visibilità prima foto
 let items = document.getElementsByClassName('fotoPrincipale');
 let items2 = document.getElementsByClassName('fotoPrincipale2');
-items[0].classList.add('active')
-items2[0].classList.add('active')
+let contatore = 0;
+items[contatore].classList.add('active')
+items2[contatore].classList.add('active')
 
 
 
 
 
 // creazione evento per andare avanti
-// bottAvanti.addEventListener('click', () => {
-//     console.log('dentro')
-// })
+bottAvanti.addEventListener('click', () => {
+    
+    if(contatore < arrFoto.length -1){
+        items[contatore].classList.remove('active')
+        items2[contatore].classList.remove('active')
+        contatore++
+        items[contatore].classList.add('active')
+        items2[contatore].classList.add('active')
+    }else{
+        items[contatore].classList.remove('active')
+        items2[contatore].classList.remove('active')
+        contatore = 0
+        items[contatore].classList.add('active')
+        items2[contatore].classList.add('active')
+    }
+})
