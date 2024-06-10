@@ -1,6 +1,6 @@
 // individuare il numero di foto per fagli cambiare dimensione 
 let numFoto = 0;
-let modificaNumFoto = document.documentElement.style.setProperty('--numFoto', numFoto);
+
 
 // variabili dei contenitori dove inserire le foto
 let contFotoPrincipale = document.querySelector('.contFoto')
@@ -28,12 +28,19 @@ let arrDescrizione = [
     'immagine avengers',
 ]
 
+// ciclo per creare immagini da database e inserirle
 for (let i = 0; i < arrFoto.length; i++) {
     let itemFoto = document.createElement('img')
     itemFoto.src = arrFoto[i]
     itemFoto.alt = arrDescrizione[i]
     contFotoPrincipale.append(itemFoto)
+    contFotoPiccole.append(itemFoto)
+    numFoto++
 }
+
+// creazione dinamica della dimensione foto laterale
+let modificaNumFoto = document.documentElement.style.setProperty('--numFoto', numFoto);
+
 // creazione evento per andare avanti
 bottAvanti.addEventListener('click', () => {
     console.log('dentro')
