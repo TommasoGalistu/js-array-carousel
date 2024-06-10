@@ -52,11 +52,11 @@ for (let i = 0; i < arrFoto.length; i++) {
 let modificaNumFoto = document.documentElement.style.setProperty('--numFoto', numFoto);
 
 // modifica visibilità prima foto
-let items = document.getElementsByClassName('fotoPrincipale');
-let items2 = document.getElementsByClassName('fotoPrincipale2');
+let fotoGrande = document.getElementsByClassName('fotoPrincipale');
+let thumbanils = document.getElementsByClassName('fotoPrincipale2');
 let contatore = 0;
-items[contatore].classList.add('active');
-items2[contatore].classList.add('active');
+fotoGrande[contatore].classList.add('active');
+thumbanils[contatore].classList.add('active');
 
 
 
@@ -66,17 +66,17 @@ items2[contatore].classList.add('active');
 bottAvanti.addEventListener('click', () => {
     
     if(contatore < arrFoto.length -1){
-        items[contatore].classList.remove('active')
-        items2[contatore].classList.remove('active')
+        fotoGrande[contatore].classList.remove('active')
+        thumbanils[contatore].classList.remove('active')
         contatore++
-        items[contatore].classList.add('active')
-        items2[contatore].classList.add('active')
+        fotoGrande[contatore].classList.add('active')
+        thumbanils[contatore].classList.add('active')
     }else{
-        items[contatore].classList.remove('active')
-        items2[contatore].classList.remove('active')
+        fotoGrande[contatore].classList.remove('active')
+        thumbanils[contatore].classList.remove('active')
         contatore = 0
-        items[contatore].classList.add('active')
-        items2[contatore].classList.add('active')
+        fotoGrande[contatore].classList.add('active')
+        thumbanils[contatore].classList.add('active')
     }
 })
 
@@ -84,17 +84,17 @@ bottAvanti.addEventListener('click', () => {
 bottIndietro.addEventListener('click', () => {
     
     if(contatore === 0){
-        items[contatore].classList.remove('active')
-        items2[contatore].classList.remove('active') 
+        fotoGrande[contatore].classList.remove('active')
+        thumbanils[contatore].classList.remove('active') 
         contatore = arrFoto.length - 1
-        items[contatore].classList.add('active')
-        items2[contatore].classList.add('active')
+        fotoGrande[contatore].classList.add('active')
+        thumbanils[contatore].classList.add('active')
     }else{
-        items[contatore].classList.remove('active')
-        items2[contatore].classList.remove('active') 
+        fotoGrande[contatore].classList.remove('active')
+        thumbanils[contatore].classList.remove('active') 
         contatore--
-        items[contatore].classList.add('active')
-        items2[contatore].classList.add('active')
+        fotoGrande[contatore].classList.add('active')
+        thumbanils[contatore].classList.add('active')
     }
         
         
